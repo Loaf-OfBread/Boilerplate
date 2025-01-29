@@ -63,5 +63,9 @@ class dev(commands.Cog):
         cogs = list(self.bot.extensions.keys())
         await ctx.send(f"Loaded cogs: {', '.join(cogs)}")
 
+    @commands.command()
+    async def raise_exception(self, ctx: commands.Context):
+        raise Exception(f'{ctx.author} ({ctx.author.id}) use the raise exception command.')
+
 async def setup(bot):
     await bot.add_cog(dev(bot))
