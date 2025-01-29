@@ -32,7 +32,7 @@ class Bot(commands.Bot):
 
 intents = discord.Intents.all()
 
-bot = Bot(command_prefix=PREFIX, intents=intents)
+bot = Bot(command_prefix=",", intents=intents)
 
 @bot.event
 async def on_command_error(ctx, error):
